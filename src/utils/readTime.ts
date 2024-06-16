@@ -10,6 +10,7 @@ export function remarkReadingTime() {
 		const readingTime = getReadingTime(textOnPage)
 		// readingTime.text will give us minutes read as a friendly string,
 		// i.e. "3 min read"
-		data.astro.frontmatter.minutesRead = readingTime.text
+		let spanishReadingTime = `${readingTime.text.split(' ')[0]} min lectura`
+		data.astro.frontmatter.minutesRead = spanishReadingTime
 	}
 }
