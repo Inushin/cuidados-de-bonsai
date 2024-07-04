@@ -21,8 +21,6 @@ jobs:
         with:
           node-version: 20.14.0
           package-manager: pnpm@9.3.0
-      - name: Clear pnpm store
-        run: pnpm store prune
 
   deploy:
     needs: build
