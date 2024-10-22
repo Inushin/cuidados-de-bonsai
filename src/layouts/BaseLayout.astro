@@ -11,6 +11,21 @@ const { title, description, image, articleDate } = Astro.props
 
 <html lang='en' class='scroll-smooth'>
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src='https://www.googletagmanager.com/gtag/js?id=G-2FWBB0Z9C6'></script>
+		<script>
+			// @ts-ignore
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				// @ts-ignore
+				dataLayer.push(arguments)
+			}
+			// @ts-ignore
+			gtag('js', new Date())
+			// @ts-ignore
+			gtag('config', 'G-2FWBB0Z9C6')
+		</script>
+
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
 		<ProviderTheme />
 		<ProviderAnimations />
